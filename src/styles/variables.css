@@ -1,0 +1,45 @@
+:root {
+  --pink-primary: #FF69B4;
+  --pink-light: #FFB6C1;
+  --pink-soft: #FFF0F5;
+  --purple: #DDA0DD;
+  --purple-dark: #BA55D3;
+  --gold: #FFD700;
+  --white-soft: #FFF5F8;
+  --shadow-pink: rgba(255, 105, 180, 0.3);
+
+  --font-family: 'Poppins', 'Comic Sans MS', cursive, sans-serif;
+  --border-radius: 20px;
+  --border-radius-lg: 30px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background: linear-gradient(135deg, var(--pink-soft) 0%, var(--purple) 100%);
+  min-height: 100vh;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+button {
+  font-family: var(--font-family);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
