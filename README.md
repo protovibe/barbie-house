@@ -1,34 +1,23 @@
 # Barbie Dream House
 
-A React dress-up game where you can explore four rooms, assemble outfits, and customize Barbie's hair, skin, eyes, and facial features. The closet includes dresses, tops, bottoms, shoes, and accessories.
+Step inside Barbie's Dream House and create a look that's all your own. Explore the rooms, try on outfits, and customize Barbie from head to toe.
 
 ![Barbie Dream House gameplay](screenshot.png)
 
-## Setup
+## How to play
 
-Requires Node.js and npm. From the repository root:
+- Select **Let's Play!** to enter the Dream House.
+- Visit the **Bedroom**, **Living Room**, **Kitchen**, and **Garden** using the room buttons.
+- Browse the closet for dresses, tops, bottoms, shoes, and accessories. Select an item to wear it, or select it again to take it off.
+- Change Barbie's hair, skin, eyes, and expression with the controls below her. Use the top-right button to clear the outfit.
+
+## Play locally
+
+With Node.js and npm installed, run:
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open the local URL printed by Vite (normally <http://localhost:5173/>), then select **Let's Play!**.
-
-## Play
-
-Switch rooms using the tabs on the left. Select closet categories and items on the right to dress Barbie; select an equipped item again to remove it. Use the controls below the character to change hair color and style, skin tone, eye color, bangs, eyes, nose, and mouth. The header buttons toggle sound and clear the outfit.
-
-## Build and checks
-
-```sh
-npm run build    # Production files in dist/
-npm run preview  # Serve the production build locally
-npm run lint     # ESLint checks
-```
-
-The production build passes. At the time of this README update, `npm run lint` reports five existing errors in `src/App.jsx`, `src/components/Barbie.jsx`, `src/components/Sparkles.jsx`, and `src/hooks/useSound.js`.
-
-## Project structure
-
-`src/App.jsx` manages game state and room navigation; `src/components/` contains the welcome screen, character, wardrobe, and effects; `src/data/` holds room and clothing data; and `src/hooks/` contains sound behavior. Vite serves the app from `index.html`.
+Open the local URL shown in your terminal (usually <http://localhost:5173/>).
