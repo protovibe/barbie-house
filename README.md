@@ -1,16 +1,34 @@
-# React + Vite
+# Barbie Dream House
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React dress-up game where you can explore four rooms, assemble outfits, and customize Barbie's hair, skin, eyes, and facial features. The closet includes dresses, tops, bottoms, shoes, and accessories.
 
-Currently, two official plugins are available:
+![Barbie Dream House gameplay](screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setup
 
-## React Compiler
+Requires Node.js and npm. From the repository root:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```sh
+npm ci
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Open the local URL printed by Vite (normally <http://localhost:5173/>), then select **Let's Play!**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Play
+
+Switch rooms using the tabs on the left. Select closet categories and items on the right to dress Barbie; select an equipped item again to remove it. Use the controls below the character to change hair color and style, skin tone, eye color, bangs, eyes, nose, and mouth. The header buttons toggle sound and clear the outfit.
+
+## Build and checks
+
+```sh
+npm run build    # Production files in dist/
+npm run preview  # Serve the production build locally
+npm run lint     # ESLint checks
+```
+
+The production build passes. At the time of this README update, `npm run lint` reports five existing errors in `src/App.jsx`, `src/components/Barbie.jsx`, `src/components/Sparkles.jsx`, and `src/hooks/useSound.js`.
+
+## Project structure
+
+`src/App.jsx` manages game state and room navigation; `src/components/` contains the welcome screen, character, wardrobe, and effects; `src/data/` holds room and clothing data; and `src/hooks/` contains sound behavior. Vite serves the app from `index.html`.
