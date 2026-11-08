@@ -25,3 +25,5 @@ Open the local URL shown in your terminal (usually <http://localhost:5173/>).
 ## Development
 
 Run `npm ci` once, then `npm run dev` for the dev server and `npm run build` for a production build.
+
+`npm run lint` checks the code with ESLint.
